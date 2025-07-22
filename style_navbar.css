@@ -1,0 +1,125 @@
+/* Membuat navbar sticky */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #C0C0C0;
+  /* Diubah dari abu-abu gelap ke perak */
+  padding: 0 2rem;
+  color: #333;
+  /* Diubah dari putih ke hitam agar terbaca */
+  position: sticky;
+  /* Menjadikan posisi sticky */
+  top: 0;
+  /* Menempel di bagian atas */
+  z-index: 1000;
+  /* Memastikan navbar di atas konten lain */
+  flex-wrap: wrap;
+  /* Memungkinkan item untuk wrap di layar kecil */
+}
+
+.nav-brand a {
+  color: #333;
+  /* Diubah dari putih ke hitam */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  /* Memungkinkan item untuk wrap di layar kecil */
+}
+
+.nav-links li {
+  padding: 1rem;
+}
+
+.nav-links a {
+  color: #333;
+  /* Diubah dari putih ke hitam */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #000080;
+  /* Diubah dari hijau ke biru navy */
+}
+
+.nav-user {
+  color: #555;
+  /* Diubah agar kontras dengan latar perak */
+  font-size: 0.9em;
+}
+
+.btn-logout,
+.btn-login-nav {
+  background-color: #d9534f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: white;
+  /* Memastikan teks tombol tetap putih */
+}
+
+.btn-login-nav {
+  background-color: #000080;
+  /* Diubah dari hijau ke biru navy */
+}
+
+.btn-logout:hover {
+  background-color: #c9302c;
+}
+
+.btn-login-nav:hover {
+  background-color: #00005a;
+  /* Warna biru navy yang lebih gelap saat hover */
+}
+
+/* Media Query untuk mobile-friendly */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    /* Sembunyikan link secara default */
+  }
+
+  .nav-links.active {
+    display: flex;
+    /* Tampilkan link saat menu aktif */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Tampilkan tombol menu */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+}
+
+/* Sembunyikan tombol menu di layar besar */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

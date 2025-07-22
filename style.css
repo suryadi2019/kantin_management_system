@@ -1,0 +1,147 @@
+/* File: style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #000080;
+  /* Diubah dari hijau ke biru navy */
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* Menghilangkan jarak antar border sel */
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #555;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Efek belang-seling agar mudah dibaca */
+}
+
+tbody tr.menu-item:hover {
+  background-color: #e6e6fa;
+  /* Diubah dari hijau muda ke biru muda */
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.btn-pesan {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.btn-pesan:hover {
+  background-color: #0056b3;
+}
+
+/* CSS untuk tombol kuantitas dan hapus */
+.btn-qty,
+.btn-hapus {
+  display: inline-block;
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-qty {
+  background-color: #5bc0de;
+  margin: 0 5px;
+}
+
+.btn-qty:hover {
+  background-color: #31b0d5;
+}
+
+.qty-text {
+  font-size: 1.1em;
+  padding: 0 5px;
+}
+
+.btn-hapus {
+  background-color: #d9534f;
+  font-size: 0.9em;
+}
+
+.btn-hapus:hover {
+  background-color: #c9302c;
+}
+
+/* Tambahkan di akhir file style.css */
+.status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.pending {
+  background-color: #f0ad4e;
+}
+
+/* Oranye */
+.status.diproses {
+  background-color: #0275d8;
+}
+
+/* Biru */
+.status.selesai {
+  background-color: #000080;
+  /* Diubah dari hijau ke biru navy */
+}
+
+/* Biru */
