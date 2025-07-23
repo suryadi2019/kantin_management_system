@@ -21,6 +21,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="pesanan_pending.php">📋 Lihat Pesanan Terbaru</a></li>
         <li><a href="inventory.php">📦 Dapur Menu & Bahan Baku</a></li>
         <li><a href="laporan_keuangan.php">📊 Laporan Keuangan</a></li>
+        <li><a href="daftar_piutang.php">💰 Daftar Piutang</a></li>
         <li><a href="register_pegawai.php">👤 Register Pegawai</a></li>
         <li><a href="input_pengeluaran.php">💸 Input Pengeluaran</a></li>
         <li><a href="syslog.php">📜 System Log</a></li>
@@ -30,6 +31,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="pesanan_pending.php">📋 Lihat Pesanan Terbaru</a></li>
         <li><a href="inventory.php">📦 Dapur Menu & Bahan Baku</a></li>
         <li><a href="laporan_keuangan.php">📊 Laporan Keuangan</a></li>
+        <li><a href="daftar_piutang.php">💰 Daftar Piutang</a></li>
         <li><a href="register_pegawai.php">👤 Register Pegawai</a></li>
         <li><a href="input_pengeluaran.php">💸 Input Pengeluaran</a></li>
 
