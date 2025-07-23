@@ -66,14 +66,19 @@ $result_detail = mysqli_stmt_get_result($stmt_detail);
       </table>
     </div>
 
-    <div style="text-align:center; margin-top:30px;">
-      <a href="proses_selesai.php?id=<?= $id_transaksi; ?>" class="btn-pesan"
-        onclick="return confirm('Apakah Anda yakin pesanan ini sudah selesai dan siap dicetak?');">
-        Tandai Selesai & Cetak Struk
-      </a>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top:30px;">
       <a href="pesanan_pending.php" class="btn-pesan" style="background-color:#6c757d;">Kembali ke Daftar Pesanan</a>
-    </div>
 
+      <div>
+        <a href="proses_telah_dilayani.php?id=<?= $id_transaksi; ?>" class="btn-pesan" style="background-color: #28a745; margin-right: 10px;"
+          onclick="return confirm('Anda yakin pesanan ini Telah Dilayani? Status akan diubah menjadi `selesai`.');">
+          Telah Dilayani
+        </a>
+        <a href="bukti.php?id=<?= $id_transaksi; ?>" target="_blank" class="btn-pesan">
+          Cetak Struk
+        </a>
+      </div>
+    </div>
   </main>
 </body>
 

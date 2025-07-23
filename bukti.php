@@ -171,7 +171,8 @@ $result_detail = mysqli_fetch_all(mysqli_stmt_get_result($stmt_detail), MYSQLI_A
     <div class="header-text">
       <h3>KANTIN RRI BANJARMASIN</h3>
       <p>Jl. Jend. A. Yani KM. 3,5 Banjarmasin</p>
-      <p>Tonton yang Anda Dengar di RRI Digital, Ikut Kami @rri_pro1banjarmasin, @rri_pro2banjarmasin, @rri_pro4banjarmasin, @rribanjarmasin</p>
+      <p>Tonton yang Anda Dengar di RRI Digital, Ikuti Kami:
+        @rri_pro1banjarmasin, @rri_pro2banjarmasin, @rri_pro4banjarmasin, @rribanjarmasin</p>
     </div>
 
     <div class="separator"></div>

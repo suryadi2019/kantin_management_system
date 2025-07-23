@@ -7,14 +7,6 @@ if (!isset($_SESSION['user_id'])) {
   die("Akses ditolak. Anda harus login sebagai pegawai untuk memproses transaksi.");
 }
 
-
-// 1. Validasi
-if (empty($_SESSION['keranjang']) || !isset($_POST['metode_pembayaran'])) {
-  header('Location: index.php');
-  exit();
-}
-// Logika untuk menghitung ulang total belanja bisa ditambahkan di sini untuk keamanan
-// tapi untuk sederhana, kita langsung tampilkan form
 ?>
 <?php include 'navbar.php'; ?>
 <!DOCTYPE html>

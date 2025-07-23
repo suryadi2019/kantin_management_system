@@ -35,10 +35,6 @@ try {
   $id_user = $_SESSION['user_id']; // Menggunakan ID user yang sedang login
   $metode_pembayaran = $_POST['metode_pembayaran'];
   $waktu_transaksi = date('Y-m-d H:i:s');
-
-  // Logika status pesanan berdasarkan metode pembayaran
-  // Jika Hutang, status 'diproses' (masuk piutang). Jika Tunai/QRIS, status 'selesai'.
-  // Status untuk semua transaksi baru selalu 'pending' agar muncul di daftar pesanan
   $status_pesanan = 'pending';
 
   $sql_trans = "INSERT INTO transaction (id_user, waktu_transaksi, total_bayar, metode_pembayaran, status_pesanan) VALUES (?, ?, ?, ?, ?)";
@@ -64,9 +60,17 @@ try {
   // 5. Jika semua berhasil, commit transaksi
   mysqli_commit($conn);
 
-  // 6. Kosongkan keranjang dan arahkan ke halaman bukti
+  // 6. Kosongkan keranjang
   unset($_SESSION['keranjang']);
-  header('Location: bukti.php?id=' . $id_transaksi_baru);
+
+  // --- PERUBAHAN UTAMA: ALUR PENGALIHAN BERDASARKAN METODE BAYAR ---
+  if ($metode_pembayaran === 'QRIS') {
+    // Jika bayar pakai QRIS, arahkan ke halaman untuk menampilkan QRIS
+    header('Location: tampilkan_qris.php?id=' . $id_transaksi_baru);
+  } else {
+    // Jika Tunai atau Hutang, langsung arahkan ke halaman bukti/struk
+    header('Location: bukti.php?id=' . $id_transaksi_baru);
+  }
   exit();
 } catch (Exception $e) {
   // Jika ada error, batalkan semua perubahan

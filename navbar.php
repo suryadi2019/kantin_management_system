@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <link rel="stylesheet" href="style_navbar.css">
 <nav class="navbar">
   <div class="nav-brand">
-    <a href="index.php">Kantin Seribu Sungai, Seribu Nikmat</a>
+    <a href="index.php">P.O.S. (Point of Sale) System</a>
   </div>
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span>
