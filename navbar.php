@@ -23,6 +23,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="laporan_keuangan.php">📊 Laporan Keuangan</a></li>
         <li><a href="daftar_piutang.php">💰 Daftar Piutang</a></li>
         <li><a href="register_pegawai.php">👤 Register Pegawai</a></li>
+        <li><a href="daftar_pegawai.php">🔧 Modifikasi Pegawai</a></li>
         <li><a href="input_pengeluaran.php">💸 Input Pengeluaran</a></li>
         <li><a href="syslog.php">📜 System Log</a></li>
         <li><a href="konfigurasi.php">⚙️ Konfigurasi</a></li>
@@ -33,6 +34,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <li><a href="laporan_keuangan.php">📊 Laporan Keuangan</a></li>
         <li><a href="daftar_piutang.php">💰 Daftar Piutang</a></li>
         <li><a href="register_pegawai.php">👤 Register Pegawai</a></li>
+        <li><a href="daftar_pegawai.php">🔧 Modifikasi Pegawai</a></li>
         <li><a href="input_pengeluaran.php">💸 Input Pengeluaran</a></li>
 
       <?php elseif ($_SESSION['user_role'] == 'dapur'): ?>
