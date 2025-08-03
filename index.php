@@ -64,7 +64,7 @@ $result = mysqli_query($conn, $sql);
   </main>
 
   <footer>
-    <p>&copy; 2025 Developed by Suryadi Haryanto</p>
+    <p>&copy; 2025 Developed by 20230100226</p>
   </footer>
 
   <script>
