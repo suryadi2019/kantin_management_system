@@ -1,5 +1,5 @@
 // URL redirect target
-const redirectUrl = "https://www.instagram.com/idayrus";
+const redirectUrl = "#";
 
 // 1. Disable klik kanan dan drag image
 document.addEventListener("contextmenu", e => e.preventDefault());
